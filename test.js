@@ -38,9 +38,26 @@ function chunkArrayInGroups(arr, size) {
 
 
 
+function bouncer(arr) {
+    var truthies = [];
+  
+    for (var elem of arr) {
+      if (elem) truthies.push(elem);
+    }
+  
+    return truthies;
+  }
+  
+  bouncer([7, "ate", "", false, 9]);
 
 
 
+function bouncer(arr) {
+    return arr.filter(function (elem){
+      return elem;
+    });
+    }
+    bouncer([7, "ate", "", false, 9]);
 
 
 // bouncer([7, "ate", "", false, 9]) should return [7, "ate", 9].
